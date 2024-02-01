@@ -1,0 +1,384 @@
+// ==============================
+// Variables
+// ==============================
+
+// ========== Global ========== //
+// Font and Line Height
+$global-font-family: system-ui, -apple-system, BlinkMacSystemFont, Segoe UI,
+  Roboto, Oxygen, Ubuntu, Cantarell, Helvetica Neue, Helvetica, Arial,
+  sans-serif !default;
+$global-font-size: 18px;
+$global-font-weight: 400;
+$global-line-height: 1.8rem;
+$global-max-width: 900px;
+
+// Color of the background
+$global-background-color: #ffffff !default;
+$global-background-color-dark: #111 !default;
+$global-background-card-color: #fff !default;
+$global-background-card-color-dark: #1a1a1a !default;
+
+// Color of the text
+$global-font-color: #161209 !default;
+$global-font-color-dark: #ccc !default;
+
+// Color of the secondary text 252627 292a2d
+$global-font-secondary-color: #505050 !default;
+$global-font-secondary-color-dark: #ccc !default;
+
+// Color of the link
+$global-link-color: #161209 !default;
+$global-link-color-dark: #fff !default;
+
+// Color of the hover link 005ce6
+$global-link-hover-color: #005ce6 !default;
+$global-link-hover-color-dark: #4fc2ff !default;
+
+// Color of the border
+$global-border-color: #f0f0f0 !default;
+$global-border-color-dark: #363636 !default;
+
+// Color of the home-avatar
+$avatar-background-color: #afc6e9 !default;
+$avatar-background-color-dark: #f2f2f2 !default;
+$avatar-border-color: rgba(128, 128, 128, 0.15) !default;
+$avatar-border-color-dark: rgba(242, 242, 242, 0.05) !default;
+// ========== Global ========== //
+
+// ========== Scrollbar ========== //
+// Color of the scrollbar
+$scrollbar-color: #87878d !default;
+
+// Color of the hover scrollbar
+$scrollbar-hover-color: #a9a9b3 !default;
+// ========== Scrollbar ========== //
+
+// ========== Selection ========== //
+// Color of the selected text
+$selection-color: rgba(53, 166, 247, 0.25) !default;
+$selection-color-dark: rgba(50, 112, 194, 0.4) !default;
+// ========== Selection ========== //
+
+// ========== Header ========== //
+// Height of the header
+$header-height: 3.5rem !default;
+
+// Color of the header background
+$header-background-color: #fff !default;
+$header-background-color-dark: #1a1a1a !default;
+
+// Font style of the header title
+$header-title-font-family: $global-font-family !default;
+$header-title-font-size: 1.5rem !default;
+
+// Color of the hover header item
+$header-hover-color: #161209 !default;
+$header-hover-color-dark: #fff !default;
+
+// Color of the search background
+$search-background-color: #e9e9e9 !default;
+$search-background-color-dark: #363636 !default;
+// ========== Header ========== //
+
+// ========== Single Content ========== //
+// Font size of the TOC
+$toc-title-font-size: 1rem !default;
+$toc-content-font-size: 0.9rem !default;
+
+// Color of the single link
+$single-link-color: #0052cd !default;
+$single-link-color-dark: #4fc2ff !default;
+
+// Color of the hover single link
+$single-link-hover-color: #0167ff !default;
+$single-link-hover-color-dark: #bdebfc !default;
+
+// Color of the table background
+$table-background-color: #fff !default;
+$table-background-color-dark: #272c34 !default;
+
+// Color of the table thead
+$table-thead-color: #ededed !default;
+$table-thead-color-dark: #20252b !default;
+
+// Color of the blockquote
+$blockquote-color: #6bd6fd !default;
+$blockquote-color-dark: #59c5ec !default;
+
+// Color of the parameter
+$skill-color: #282828 !default;
+$level-color: #0fffb7 !default;
+$level-color-dark: #00875e !default;
+// ========== Single Content ========== //
+
+// ========== Pagination ========== //
+// Color of the link in pagination
+$pagination-link-color: #0052cd !default;
+$pagination-link-color-dark: #4fc2ff !default;
+
+// Color of the hover link in pagination
+$pagination-link-hover-color: #000 !default;
+$pagination-link-hover-color-dark: #fff !default;
+// ========== Pagination ========== //
+
+// ========== Code ========== //
+// Color of the code
+$code-color: #272822 !default;
+$code-color-dark: #5af78e !default;
+
+// Color of the code background
+$code-background-color: #fafafa !default;
+$code-background-color-dark: #282a36 !default;
+
+$code-info-color: #9c9c9c !default;
+$code-info-color-dark: #b1b0b0 !default;
+
+// Font size of the code
+$code-font-size: 0.875rem !default;
+
+// Font family of the code
+$code-font-family: Source Code Pro, Menlo, Consolas, Monaco, monospace,
+  $global-font-family !default;
+
+// Code type map
+$code-type-map: (
+  // Custom code type
+  language-bash: 'Bash',
+  language-c: 'C',
+  language-cs: 'C#',
+  language-cpp: 'C++',
+  language-clojure: 'Clojure',
+  language-coffeescript: 'CoffeeScript',
+  language-css: 'CSS',
+  language-dart: 'Dart',
+  language-diff: 'Diff',
+  language-erlang: 'Erlang',
+  language-go: 'Go',
+  language-go-html-template: 'Go HTML Template',
+  language-groovy: 'Groovy',
+  language-haskell: 'Haskell',
+  language-html: 'HTML',
+  language-http: 'HTTP',
+  language-xml: 'XML',
+  language-java: 'Java',
+  language-js: 'JavaScript',
+  language-javascript: 'JavaScript',
+  language-json: 'JSON',
+  language-kotlin: 'Kotlin',
+  language-latex: 'LaTeX',
+  language-less: 'Less',
+  language-lisp: 'Lisp',
+  language-lua: 'Lua',
+  language-makefile: 'Makefile',
+  language-markdown: 'Markdown',
+  language-matlab: 'Matlab',
+  language-objectivec: 'Objective-C',
+  language-php: 'PHP',
+  language-perl: 'Perl',
+  language-python: 'Python',
+  language-r: 'R',
+  language-ruby: 'Ruby',
+  language-rust: 'Rust',
+  language-scala: 'Scala',
+  language-scss: 'Scss',
+  language-shell: 'Shell',
+  language-sql: 'SQL',
+  language-swift: 'Swift',
+  language-tex: 'TeX',
+  language-toml: 'TOML',
+  language-ts: 'TypeScript',
+  language-typescript: 'TypeScript',
+  language-vue: 'Vue',
+  language-yml: 'YAML',
+  language-yaml: 'YAML'
+) !default;
+
+$code-highlight-color-map: (
+  /* Parentheses */ 'p': #333333,
+  /* Keyword */ 'k': #f74840,
+  /* KeywordConstant */ 'kc': #f74840,
+  /* KeywordDeclaration */ 'kd': #f74840,
+  /* KeywordNamespace */ 'kn': #f74840,
+  /* KeywordPseudo */ 'kp': #f74840,
+  /* KeywordReserved */ 'kr': #f74840,
+  /* KeywordType */ 'kt': #f74840,
+  /* Name */ 'n': #2b77fa,
+  /* NameAttribute */ 'na': #2b77fa,
+  /* NameBuiltin */ 'nb': #f74840,
+  /* NameBuiltinPseudo */ 'bp': #f74840,
+  /* NameClass */ 'nc': #cb8100,
+  /* NameConstant */ 'no': #2b77fa,
+  /* NameDecorator */ 'nd': #0086c1,
+  /* NameEntity */ 'ni': #2b77fa,
+  /* NameException */ 'ne': #2b77fa,
+  /* NameFunction */ 'nf': #2b77fa,
+  /* NameFunctionMagic */ 'fm': #1ccad6,
+  /* NameLabel */ 'nl': #2b77fa,
+  /* NameNamespace */ 'nn': #2b77fa,
+  /* NameOther */ 'nx': #2b77fa,
+  /* NameProperty */ 'py': #2b77fa,
+  /* NameTag */ 'nt': #2b77fa,
+  /* NameVariable */ 'nv': #2b77fa,
+  /* NameVariableClass */ 'vc': #2b77fa,
+  /* NameVariableGlobal */ 'vg': #2b77fa,
+  /* NameVariableInstance */ 'vi': #2b77fa,
+  /* NameVariableMagic */ 'vm': #2b77fa,
+  /* Literal */ 'l': #2aa198,
+  /* LiteralDate */ 'ld': #2aa198,
+  /* LiteralString */ 's': #333333,
+  /* LiteralStringAffix */ 'sa': #11892f,
+  /* LiteralStringBacktick */ 'sb': #333333,
+  /* LiteralStringChar */ 'sc': #333333,
+  /* LiteralStringDelimiter */ 'dl': #333333,
+  /* LiteralStringDoc */ 'sd': #333333,
+  /* LiteralStringDouble */ 's2': #333333,
+  /* LiteralStringEscape */ 'se': #333333,
+  /* LiteralStringHeredoc */ 'sh': #333333,
+  /* LiteralStringInterpol */ 'si': #333333,
+  /* LiteralStringOther */ 'sx': #333333,
+  /* LiteralStringRegex */ 'sr': #333333,
+  /* LiteralStringSingle */ 's1': #333333,
+  /* LiteralStringSymbol */ 'ss': #333333,
+  /* LiteralNumber */ 'm': #e2893c,
+  /* LiteralNumberBin */ 'mb': #e2893c,
+  /* LiteralNumberFloat */ 'mf': #e2893c,
+  /* LiteralNumberHex */ 'mh': #e2893c,
+  /* LiteralNumberInteger */ 'mi': #e2893c,
+  /* LiteralNumberIntegerLong */ 'il': #e2893c,
+  /* LiteralNumberOct */ 'mo': #e2893c,
+  /* Operator */ 'o': #f19b04,
+  /* OperatorWord */ 'ow': #f74840,
+  /* Comment */ 'c': #a0a1a8,
+  /* CommentHashbang */ 'ch': #a0a1a8,
+  /* CommentMultiline */ 'cm': #a0a1a8,
+  /* CommentSingle */ 'c1': #a0a1a8,
+  /* CommentSpecial */ 'cs': #a0a1a8,
+  /* CommentPreproc */ 'cp': #a0a1a8,
+  /* CommentPreprocFile */ 'cpf': #a0a1a8,
+  /* Generic */ 'g': #e72d40,
+  /* GenericDeleted */ 'gd': #e72d40,
+  /* GenericEmph */ 'ge': #e72d40,
+  /* GenericError */ 'gr': #e72d40,
+  /* GenericHeading */ 'gh': #e72d40,
+  /* GenericInserted */ 'gi': #e72d40,
+  /* GenericOutput */ 'go': #e72d40,
+  /* GenericPrompt */ 'gp': #e72d40,
+  /* GenericStrong */ 'gs': #e72d40,
+  /* GenericSubheading */ 'gu': #e72d40,
+  /* GenericTraceback */ 'gt': #e72d40,
+  /* GenericUnderline */ 'gl': #e72d40,
+  /* TextWhitespace */ 'w': #bbbbbb
+) !default;
+
+$code-highlight-color-map-dark: (
+  /* Parentheses */ 'p': #abb2bf,
+  /* Keyword */ 'k': #ff6ac1,
+  /* KeywordConstant */ 'kc': #ff6ac1,
+  /* KeywordDeclaration */ 'kd': #ff5c57,
+  /* KeywordNamespace */ 'kn': #ff6ac1,
+  /* KeywordPseudo */ 'kp': #ff6ac1,
+  /* KeywordReserved */ 'kr': #ff6ac1,
+  /* KeywordType */ 'kt': #9aedfe,
+  /* Name */ 'n': #5af78e,
+  /* NameAttribute */ 'na': #57c7ff,
+  /* NameBuiltin */ 'nb': #ff5c57,
+  /* NameBuiltinPseudo */ 'bp': #5af78e,
+  /* NameClass */ 'nc': #f3f99d,
+  /* NameConstant */ 'no': #ff9f43,
+  /* NameDecorator */ 'nd': #ff9f43,
+  /* NameEntity */ 'ni': #5af78e,
+  /* NameException */ 'ne': #5af78e,
+  /* NameFunction */ 'nf': #57c7ff,
+  /* NameFunctionMagic */ 'fm': #5af78e,
+  /* NameLabel */ 'nl': #ff5c57,
+  /* NameNamespace */ 'nn': #5af78e,
+  /* NameOther */ 'nx': #5af78e,
+  /* NameProperty */ 'py': #5af78e,
+  /* NameTag */ 'nt': #ff6ac1,
+  /* NameVariable */ 'nv': #ff5c57,
+  /* NameVariableClass */ 'vc': #ff5c57,
+  /* NameVariableGlobal */ 'vg': #ff5c57,
+  /* NameVariableInstance */ 'vi': #ff5c57,
+  /* NameVariableMagic */ 'vm': #5af78e,
+  /* Literal */ 'l': #5af78e,
+  /* LiteralDate */ 'ld': #5af78e,
+  /* LiteralString */ 's': #e2e4e5,
+  /* LiteralStringAffix */ 'sa': #e2e4e5,
+  /* LiteralStringBacktick */ 'sb': #e2e4e5,
+  /* LiteralStringChar */ 'sc': #e2e4e5,
+  /* LiteralStringDelimiter */ 'dl': #e2e4e5,
+  /* LiteralStringDoc */ 'sd': #e2e4e5,
+  /* LiteralStringDouble */ 's2': #e2e4e5,
+  /* LiteralStringEscape */ 'se': #e2e4e5,
+  /* LiteralStringHeredoc */ 'sh': #e2e4e5,
+  /* LiteralStringInterpol */ 'si': #e2e4e5,
+  /* LiteralStringOther */ 'sx': #e2e4e5,
+  /* LiteralStringRegex */ 'sr': #e2e4e5,
+  /* LiteralStringSingle */ 's1': #e2e4e5,
+  /* LiteralStringSymbol */ 'ss': #e2e4e5,
+  /* LiteralNumber */ 'm': #ff9f43,
+  /* LiteralNumberBin */ 'mb': #ff9f43,
+  /* LiteralNumberFloat */ 'mf': #ff9f43,
+  /* LiteralNumberHex */ 'mh': #ff9f43,
+  /* LiteralNumberInteger */ 'mi': #ff9f43,
+  /* LiteralNumberIntegerLong */ 'il': #ff9f43,
+  /* LiteralNumberOct */ 'mo': #ff9f43,
+  /* Operator */ 'o': #ff6ac1,
+  /* OperatorWord */ 'ow': #ff6ac1,
+  /* Comment */ 'c': #78787e,
+  /* CommentHashbang */ 'ch': #78787e,
+  /* CommentMultiline */ 'cm': #78787e,
+  /* CommentSingle */ 'c1': #78787e,
+  /* CommentSpecial */ 'cs': #78787e,
+  /* CommentPreproc */ 'cp': #78787e,
+  /* CommentPreprocFile */ 'cpf': #78787e,
+  /* Generic */ 'g': #f8c555,
+  /* GenericDeleted */ 'gd': #f8c555,
+  /* GenericEmph */ 'ge': #f8c555,
+  /* GenericError */ 'gr': #f8c555,
+  /* GenericHeading */ 'gh': #f8c555,
+  /* GenericInserted */ 'gi': #f8c555,
+  /* GenericOutput */ 'go': #f8c555,
+  /* GenericPrompt */ 'gp': #f8c555,
+  /* GenericStrong */ 'gs': #f8c555,
+  /* GenericSubheading */ 'gu': #f8c555,
+  /* GenericTraceback */ 'gt': #f8c555,
+  /* TextWhitespace */ 'w': #bbbbbb
+) !default;
+// ========== Code ========== //
+
+// ========== Admonition ========== //
+// Color map of the admonition
+$admonition-color-map: (
+  'note': #448aff,
+  'abstract': #00b0ff,
+  'info': #00b8d4,
+  'tip': #00bfa5,
+  'success': #00c853,
+  'question': #64dd17,
+  'warning': #ff9100,
+  'failure': #ff5252,
+  'danger': #ff1744,
+  'bug': #f50057,
+  'example': #651fff,
+  'quote': #9e9e9e
+) !default;
+
+// Color map of the admonition background
+$admonition-background-color-map: (
+  'note': rgba(68, 138, 255, 0.1),
+  'abstract': rgba(0, 176, 255, 0.1),
+  'info': rgba(0, 184, 212, 0.1),
+  'tip': rgba(0, 191, 165, 0.1),
+  'success': rgba(0, 200, 83, 0.1),
+  'question': rgba(100, 221, 23, 0.1),
+  'warning': rgba(255, 145, 0, 0.1),
+  'failure': rgba(255, 82, 82, 0.1),
+  'danger': rgba(255, 23, 68, 0.1),
+  'bug': rgba(245, 0, 87, 0.1),
+  'example': rgba(101, 31, 255, 0.1),
+  'quote': rgba(159, 159, 159, 0.1)
+) !default;
+// ========== Admonition ========== //
+
+$MAX_LENGTH: 12000px;

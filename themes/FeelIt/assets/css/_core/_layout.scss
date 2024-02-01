@@ -1,0 +1,23 @@
+/** Layout **/
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  width: 100%;
+
+  main {
+    flex: 1 0 auto;
+    height: 80%;
+
+    .container {
+        display: flex;
+        align-items: flex-start;
+        flex-direction: row;
+        justify-content: center;
+        max-width: $global-max-width;
+        width: 100%;
+        margin: auto;
+        padding: 0 1rem;
+    }
+  }
+}

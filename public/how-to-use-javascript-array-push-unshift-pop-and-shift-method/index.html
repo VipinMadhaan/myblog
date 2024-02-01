@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="robots" content="noodp" />
+        <title>How to use JavaScript array push, unshift, pop, and shift methods - Vipin Kumar Madhaan</title><meta name="description" content="Guide to write JavaScript array push, unshift, pop, and shift methods"><meta property="og:title" content="How to use JavaScript array push, unshift, pop, and shift methods" />
+<meta property="og:description" content="Guide to write JavaScript array push, unshift, pop, and shift methods" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://ivipin.com/how-to-use-javascript-array-push-unshift-pop-and-shift-method/" /><meta property="og:image" content="https://ivipin.com/twitter-card.png" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2022-10-13T00:00:00+05:30" />
+<meta property="article:modified_time" content="2022-10-13T00:00:00+05:30" />
+
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:image" content="https://ivipin.com/twitter-card.png" /><meta name="twitter:title" content="How to use JavaScript array push, unshift, pop, and shift methods"/>
+<meta name="twitter:description" content="Guide to write JavaScript array push, unshift, pop, and shift methods"/>
+<meta name="twitter:site" content="@VipinMadhaan"/>
+<meta name="application-name" content="Vipin Kumar Madhaan">
+<meta name="apple-mobile-web-app-title" content="Vipin Kumar Madhaan"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="https://ivipin.com/how-to-use-javascript-array-push-unshift-pop-and-shift-method/" /><link rel="prev" href="https://ivipin.com/how-to-send-get-and-post-ajax-api-requests-in-vanilla-javascript/" /><link rel="stylesheet" href="/css/page.min.css"><link rel="stylesheet" href="/css/home.min.css"><meta name="google-site-verification" content="Iv7Ykyoy37qO1y8uh_uz8MXCk5a6pH31QUg0_5kqNmM" /><meta name="msvalidate.01" content="883A41EABD86043CA9E5B963D526D641" /><meta name="yandex-verification" content="1f990bf33192771e" /><meta name="p:domain_verify" content="6cab42d499d5ef9f66cfddcb293a7775" /><script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "headline": "How to use JavaScript array push, unshift, pop, and shift methods",
+        "inLanguage": "en",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https:\/\/ivipin.com\/how-to-use-javascript-array-push-unshift-pop-and-shift-method\/"
+        },"image": ["https:\/\/ivipin.com\/profile.webp","https:\/\/ivipin.com\/icon.png"],"genre": "posts","keywords": "JavaScript, JS","wordcount":  1074 ,
+        "url": "https:\/\/ivipin.com\/how-to-use-javascript-array-push-unshift-pop-and-shift-method\/","datePublished": "2022-10-13T00:00:00+05:30","dateModified": "2022-10-13T00:00:00+05:30","license": "Vipin Kumar Madhaan","publisher": {
+            "@type": "Organization",
+            "name": "Vipin Kumar Madhaan","logo": "https:\/\/ivipin.com\/profile.webp"},"author": {
+                "@type": "Person",
+                "name": "Vipin Kumar Madhaan"
+            },"description": "Guide to write JavaScript array push, unshift, pop, and shift methods"
+    }
+    </script></head><body data-header-desktop="fixed" data-header-mobile="fixed"><script>(window.localStorage && localStorage.getItem('theme') ? localStorage.getItem('theme') === 'dark' : ('light' === 'auto' ? window.matchMedia('(prefers-color-scheme: dark)').matches : 'light' === 'dark')) && document.body.setAttribute('theme', 'dark');</script>
+
+        <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
+    <div class="header-wrapper">
+        <div class="header-title">
+            <a href="/" title="Vipin Kumar Madhaan"><img
+        class="lazyload logo"
+        src="/svg/loading.min.svg"
+        data-src="/logo.svg"
+        data-srcset="/logo.svg, /logo.svg 1.5x, /logo.svg 2x"
+        data-sizes="auto"
+        alt="Home"
+        title="Home" /></a><span class="menu-item delimiter"></span><span class="header-title-pre"><a href="https://twitter.com/VipinMadhaan" title="Twitter" target="_blank" rel="noopener noreffer me"><i data-svg-src="/lib/simple-icons/icons/twitter.min.svg"></i></a></span><span class="header-title-pre"><a href="https://linkedin.com/in/VipinMadhaan" title="LinkedIn" target="_blank" rel="noopener noreffer me"><i data-svg-src="/lib/simple-icons/icons/linkedin.min.svg"></i></a></span><span class="header-title-pre"><a href="https://github.com/VipinMadhaan" title="GitHub" target="_blank" rel="noopener noreffer me"><i data-svg-src="/lib/simple-icons/icons/github.min.svg"></i></a></span></div>
+        <div class="menu">
+            <div class="menu-inner"><a class="menu-item" href="/posts/"> Posts </a><a class="menu-item" href="/tags/"> Tags </a><a class="menu-item" href="/about/"> About </a><span class="menu-item delimiter"></span><span class="menu-item search" id="search-desktop">
+                        <input type="text" placeholder="Search titles or contents..." id="search-input-desktop">
+                        <a href="#" class="search-button search-toggle" id="search-toggle-desktop" title="Search">
+                            <i class="fa-solid fa-search fa-fw"></i>
+                        </a>
+                        <a href="#" class="search-button search-clear" id="search-clear-desktop" title="Clear">
+                            <i class="fa-solid fa-times-circle fa-fw"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-desktop">
+                            <i class="fa-solid fa-spinner fa-fw fa-spin"></i>
+                        </span>
+                    </span><a href="#" onclick="return false;" class="menu-item theme-switch" title="Switch Theme">
+                    <i class="fa-solid fa-adjust fa-fw"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</header><header class="mobile" id="header-mobile">
+    <div class="header-container">
+        <div class="header-wrapper">
+            <div class="header-title">
+                <a href="/" title="Vipin Kumar Madhaan"><img
+        class="lazyload logo"
+        src="/svg/loading.min.svg"
+        data-src="/logo.svg"
+        data-srcset="/logo.svg, /logo.svg 1.5x, /logo.svg 2x"
+        data-sizes="auto"
+        alt="/logo.svg"
+        title="/logo.svg" /></a><span class="menu-item delimiter"></span><span class="header-title-pre"><a href="https://twitter.com/VipinMadhaan" title="Twitter" target="_blank" rel="noopener noreffer me"><i data-svg-src="/lib/simple-icons/icons/twitter.min.svg"></i></a></span><span class="header-title-pre"><a href="https://linkedin.com/in/VipinMadhaan" title="LinkedIn" target="_blank" rel="noopener noreffer me"><i data-svg-src="/lib/simple-icons/icons/linkedin.min.svg"></i></a></span><span class="header-title-pre"><a href="https://github.com/VipinMadhaan" title="GitHub" target="_blank" rel="noopener noreffer me"><i data-svg-src="/lib/simple-icons/icons/github.min.svg"></i></a></span></div>
+            <div class="menu-toggle" id="menu-toggle-mobile">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+        <div class="menu" id="menu-mobile"><div class="search-wrapper">
+                    <div class="search mobile" id="search-mobile">
+                        <input type="text" placeholder="Search titles or contents..." id="search-input-mobile">
+                        <a href="#" class="search-button search-toggle" id="search-toggle-mobile" title="Search">
+                            <i class="fa-solid fa-search fa-fw"></i>
+                        </a>
+                        <a href="#" class="search-button search-clear" id="search-clear-mobile" title="Clear">
+                            <i class="fa-solid fa-times-circle fa-fw"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-mobile">
+                            <i class="fa-solid fa-spinner fa-fw fa-spin"></i>
+                        </span>
+                    </div>
+                    <a href="#" class="search-cancel" id="search-cancel-mobile">
+                        Cancel
+                    </a>
+                </div><a class="menu-item" href="/posts/" title="">Posts</a><a class="menu-item" href="/tags/" title="">Tags</a><a class="menu-item" href="/about/" title="">About</a><div class="menu-item"><a href="#" onclick="return false;" class="theme-switch" title="Switch Theme">
+                    <i class="fa-solid fa-adjust fa-fw"></i>
+                </a>
+            </div></div>
+    </div>
+</header><div class="search-dropdown desktop">
+    <div id="search-dropdown-desktop"></div>
+</div>
+<div class="search-dropdown mobile">
+    <div id="search-dropdown-mobile"></div>
+</div><main class="main">
+                <div class="container">
+
+    <article class="page single" data-toc="enable"><div class="single-card" ><h2 class="single-title animated flipInX">How to use JavaScript array push, unshift, pop, and shift methods</h2><div class="post-meta">
+                <div class="post-meta-line"><span class="post-author"><a href="https://ivipin.com/about" title="Author" target="_blank" rel="noopener noreffer author" class="author"><i class="fa-solid fa-user-circle fa-fw"></i>Vipin Kumar Madhaan</a></span>&nbsp;<span class="post-category">published in  <a href="/categories/javascript/"><i class="fa-regular fa-folder fa-fw"></i>JavaScript</a></span></div>
+                <div class="post-meta-line"><span><i class="fa-regular fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2022-10-13">2022-10-13</time></span>&nbsp;<span><i class="fa-solid fa-pencil-alt fa-fw"></i>&nbsp;1074 words</span>&nbsp;
+                    <span><i class="fa-regular fa-clock fa-fw"></i>&nbsp;6 minutes</span>&nbsp;</div>
+            </div>
+            
+            <hr><div class="details toc" id="toc-static"  data-kept="true">
+                    <div class="details-summary toc-title">
+                        <span>Contents</span>
+                        <span><i class="details-icon fa-solid fa-angle-right"></i></span>
+                    </div>
+                    <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#push-method">Push Method</a></li>
+        <li><a href="#unshift-method-header-addition">Unshift Method (Header addition)</a></li>
+        <li><a href="#pop-method-tail-deletion">Pop Method (Tail deletion)</a></li>
+        <li><a href="#shift-method">Shift Method</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav></div>
+                </div><div class="content" id="content"><p>This article primarily introduces the JavaScript array Push, Unshift, Pop, and Shift methods, along with an example form for analyzing the JavaScript array Push, Unshift, Pop, and Shift methods for array addition, deletion, and other related operation skills.</p>
+<h3 id="push-method">Push Method</h3>
+<p>The Push method appends one or more elements to the end of the array and returns the array&rsquo;s new length.
+The explanation demonstrates that the push method only needs to add the elements to the end of the array in sequence, without changing the index of the original array elements.</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="nb">Array</span><span class="p">.</span><span class="nx">prototype</span><span class="p">.</span><span class="nx">_push</span> <span class="o">=</span> <span class="kd">function</span> <span class="p">(...</span><span class="nx">value</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="k">for</span> <span class="p">(</span><span class="kd">var</span> <span class="nx">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="nx">i</span> <span class="o">&lt;</span> <span class="nx">arguments</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="k">this</span><span class="p">[</span><span class="k">this</span><span class="p">.</span><span class="nx">length</span><span class="p">]</span> <span class="o">=</span> <span class="nx">arguments</span><span class="p">[</span><span class="nx">i</span><span class="p">];</span>
+</span></span><span class="line"><span class="cl">  <span class="p">}</span>
+</span></span><span class="line"><span class="cl">  <span class="k">return</span> <span class="k">this</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">};</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kd">var</span> <span class="nx">arr</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">];</span>
+</span></span><span class="line"><span class="cl"><span class="nx">arr</span><span class="p">.</span><span class="nx">_push</span><span class="p">(</span><span class="mi">9</span><span class="p">,</span> <span class="mi">8</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">arr</span><span class="p">);</span> <span class="c1">// [ 1, 2, 3, 4, 9, 8 ]
+</span></span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="unshift-method-header-addition">Unshift Method (Header addition)</h3>
+<p>The unshift method adds one or more elements to the beginning of the array and returns the new length of the array. The unshift method modifies the original array.
+When you use the unshift method to add elements to the array&rsquo;s head, the length of the array changes, but unlike when you add elements to the tail, the original element index of the array does not change. The unshift method simply shifts the index of the original element to the right.</p>
+<p>For example, to add just one element, you must shift the index of each array element to the right one by one. Assuming the initial array length is four, adding an element to the head increases the array length to five, and because it moves backward in sequence, its <code>array[5-1]</code> must now be the last element.
+So we can loop from the last element of the array to the next element, <code>array[i]</code> assign the value to the loop, <code>array[i - 1]</code> stop at 1, and assign the 0th item of the array to the value that needs to be added.</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="nb">Array</span><span class="p">.</span><span class="nx">prototype</span><span class="p">.</span><span class="nx">_unshift</span> <span class="o">=</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">value</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="k">for</span> <span class="p">(</span><span class="kd">let</span> <span class="nx">i</span> <span class="o">=</span> <span class="k">this</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span> <span class="nx">i</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">;</span> <span class="nx">i</span><span class="o">--</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="k">this</span><span class="p">[</span><span class="nx">i</span><span class="p">]</span> <span class="o">=</span> <span class="k">this</span><span class="p">[</span><span class="nx">i</span> <span class="o">-</span> <span class="mi">1</span><span class="p">];</span>
+</span></span><span class="line"><span class="cl">  <span class="p">}</span>
+</span></span><span class="line"><span class="cl">  <span class="k">this</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="nx">value</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="k">return</span> <span class="k">this</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">};</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kd">var</span> <span class="nx">arr</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">];</span>
+</span></span><span class="line"><span class="cl"><span class="nx">arr</span><span class="p">.</span><span class="nx">_unshift</span><span class="p">(</span><span class="mi">8</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">arr</span><span class="p">);</span> <span class="c1">// [ 8, 1, 2, 3, 4 ]
+</span></span></span></code></pre></td></tr></table>
+</div>
+</div><p>The above code only adds one element to the head, but the unshift method allows you to add multiple elements. E.G:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="kd">var</span> <span class="nx">arr</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">];</span>
+</span></span><span class="line"><span class="cl"><span class="nx">arr</span><span class="p">.</span><span class="nx">unshift</span><span class="p">(</span><span class="mi">8</span><span class="p">,</span> <span class="mi">7</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">arr</span><span class="p">);</span> <span class="c1">// [ 8, 7, 1, 2, 3, 4 ]
+</span></span></span></code></pre></td></tr></table>
+</div>
+</div><p>In such a case, you should be aware of several parameters that have been entered. You can begin with the arguments object. The concept is as follows: first the loop is based on the length of the last generated array from back to front, moves the elements in the sequence, and then sequentially places the new elements at the head of the array.</p>
+<p>The length of the new array is equal to the length of the original array plus the number of parameters. By looping from back to front and moving the final element of the original array to the final element of the new array, The starting point of the loop is the length of the original array plus the number of parameters. Because it is necessary to insert elements with the number of input parameters in the head. The endpoint of the loop is the number of input parameters.
+But since the index is always one element less than the length, the start and endpoints need to be decremented by one. Now you can write the logic of circular movement first.</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="nb">Array</span><span class="p">.</span><span class="nx">prototype</span><span class="p">.</span><span class="nx">_unshift</span> <span class="o">=</span> <span class="kd">function</span> <span class="p">(...</span><span class="nx">value</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="k">for</span> <span class="p">(</span><span class="kd">var</span> <span class="nx">i</span> <span class="o">=</span> <span class="k">this</span><span class="p">.</span><span class="nx">length</span> <span class="o">+</span> <span class="nx">arguments</span><span class="p">.</span><span class="nx">length</span> <span class="o">-</span> <span class="mi">1</span><span class="p">;</span> <span class="nx">i</span> <span class="o">&gt;</span> <span class="nx">arguments</span><span class="p">.</span><span class="nx">length</span> <span class="o">-</span> <span class="mi">1</span><span class="p">;</span> <span class="nx">i</span><span class="o">--</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="k">this</span><span class="p">[</span><span class="nx">i</span><span class="p">]</span> <span class="o">=</span> <span class="k">this</span><span class="p">[</span><span class="nx">i</span> <span class="o">-</span> <span class="nx">arguments</span><span class="p">.</span><span class="nx">length</span><span class="p">];</span>
+</span></span><span class="line"><span class="cl">  <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">};</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>In the previous step, the array head&rsquo;s position has been vacated, and the second step is to insert new elements. So you only need to loop through the arguments now.</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="k">for</span> <span class="p">(</span><span class="kd">var</span> <span class="nx">k</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="nx">k</span> <span class="o">&lt;</span> <span class="nx">arguments</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span> <span class="nx">k</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="k">this</span><span class="p">[</span><span class="nx">k</span><span class="p">]</span> <span class="o">=</span> <span class="nx">arguments</span><span class="p">[</span><span class="nx">k</span><span class="p">];</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>The complete unshift method example:-</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="nb">Array</span><span class="p">.</span><span class="nx">prototype</span><span class="p">.</span><span class="nx">_unshift</span> <span class="o">=</span> <span class="kd">function</span><span class="p">(...</span><span class="nx">value</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="k">for</span> <span class="p">(</span><span class="kd">var</span> <span class="nx">i</span> <span class="o">=</span> <span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">length</span> <span class="o">+</span> <span class="nx">arguments</span><span class="p">.</span><span class="nx">length</span> <span class="o">-</span> <span class="mi">1</span><span class="p">);</span> <span class="nx">i</span> <span class="o">&gt;</span> <span class="nx">arguments</span><span class="p">.</span><span class="nx">length</span> <span class="o">-</span> <span class="mi">1</span><span class="p">;</span> <span class="nx">i</span><span class="o">--</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="k">this</span><span class="p">[</span><span class="nx">i</span><span class="p">]</span> <span class="o">=</span> <span class="k">this</span><span class="err">\</span><span class="p">[</span><span class="nx">i</span> <span class="o">-</span> <span class="nx">arguments</span><span class="p">.</span><span class="nx">length</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">  <span class="p">}</span>
+</span></span><span class="line"><span class="cl">  <span class="k">for</span><span class="p">(</span><span class="kd">var</span> <span class="nx">k</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="nx">k</span> <span class="o">&lt;</span> <span class="nx">arguments</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span> <span class="nx">k</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="k">this</span><span class="p">[</span><span class="nx">k</span><span class="p">]</span> <span class="o">=</span> <span class="nx">arguments</span><span class="p">[</span><span class="nx">k</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">  <span class="p">}</span>
+</span></span><span class="line"><span class="cl">  <span class="k">return</span> <span class="k">this</span><span class="p">.</span><span class="nx">length</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kd">var</span> <span class="nx">arr</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl"><span class="nx">arr</span><span class="p">.</span><span class="nx">_unshift</span><span class="p">(</span><span class="mi">9</span><span class="p">,</span> <span class="mi">8</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">arr</span><span class="p">);</span> <span class="c1">// [ 9, 8, 1, 2, 3, 4 ]
+</span></span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="pop-method-tail-deletion">Pop Method (Tail deletion)</h3>
+<p>The pop method deletes the last element of the array object, shortens the array by one, and returns the value of the deleted element. If the array is already empty, pop returns an undefined value rather than changing it.
+The pop method first saves the last element of the array to facilitate the return, then deletes the last element of the array and sets it to null, and finally determines whether the array is empty. The pop method shortens the array by one element.</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="nb">Array</span><span class="p">.</span><span class="nx">prototype</span><span class="p">.</span><span class="nx">_pop</span> <span class="o">=</span> <span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="k">this</span><span class="p">.</span><span class="nx">length</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="kc">undefined</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">}</span>
+</span></span><span class="line"><span class="cl">  <span class="kd">var</span> <span class="nx">end</span> <span class="o">=</span> <span class="k">this</span><span class="p">[</span><span class="k">this</span><span class="p">.</span><span class="nx">length</span> <span class="o">-</span> <span class="mi">1</span><span class="p">];</span>
+</span></span><span class="line"><span class="cl">  <span class="k">this</span><span class="p">[</span><span class="k">this</span><span class="p">.</span><span class="nx">length</span> <span class="o">-</span> <span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="kc">null</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="k">this</span><span class="p">.</span><span class="nx">length</span> <span class="o">=</span> <span class="k">this</span><span class="p">.</span><span class="nx">length</span> <span class="o">-</span> <span class="mi">1</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="k">return</span> <span class="nx">end</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">};</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kd">var</span> <span class="nx">arr</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">];</span>
+</span></span><span class="line"><span class="cl"><span class="nx">arr</span><span class="p">.</span><span class="nx">_pop</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl"><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">arr</span><span class="p">);</span> <span class="c1">// [ 1, 2, 3 ]
+</span></span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="shift-method">Shift Method</h3>
+<p>The shift method is used to delete the first element of the array and return the value of the first element.
+The deletion of a header modifies the index of the original array element, causing the index of the elements that have not been deleted to shift to the left. The deleted element must first be recorded for easy return, and then the array&rsquo;s first element is set to null. Finally, the shift method iterates through the array and changes the index for every element.</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="nb">Array</span><span class="p">.</span><span class="nx">prototype</span><span class="p">.</span><span class="nx">_shift</span> <span class="o">=</span> <span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="k">this</span><span class="p">.</span><span class="nx">length</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="kc">undefined</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">}</span>
+</span></span><span class="line"><span class="cl">  <span class="kd">var</span> <span class="nx">start</span> <span class="o">=</span> <span class="k">this</span><span class="p">[</span><span class="mi">0</span><span class="p">];</span>
+</span></span><span class="line"><span class="cl">  <span class="k">this</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="kc">null</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="k">for</span> <span class="p">(</span><span class="kd">var</span> <span class="nx">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="nx">i</span> <span class="o">&lt;</span> <span class="k">this</span><span class="p">.</span><span class="nx">length</span> <span class="o">-</span> <span class="mi">1</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="k">this</span><span class="p">[</span><span class="nx">i</span><span class="p">]</span> <span class="o">=</span> <span class="k">this</span><span class="p">[</span><span class="nx">i</span> <span class="o">+</span> <span class="mi">1</span><span class="p">];</span>
+</span></span><span class="line"><span class="cl">  <span class="p">}</span>
+</span></span><span class="line"><span class="cl">  <span class="k">this</span><span class="p">.</span><span class="nx">length</span> <span class="o">=</span> <span class="k">this</span><span class="p">.</span><span class="nx">length</span> <span class="o">-</span> <span class="mi">1</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="k">return</span> <span class="nx">start</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">};</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kd">var</span> <span class="nx">arr</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">];</span>
+</span></span><span class="line"><span class="cl"><span class="nx">arr</span><span class="p">.</span><span class="nx">_shift</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl"><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">arr</span><span class="p">);</span> <span class="c1">// [ 2, 3, 4 ]
+</span></span></span></code></pre></td></tr></table>
+</div>
+</div></div><div class="post-footer" id="post-footer">
+    <div class="post-info"><div class="post-info-tag"><span><a href="/tags/javascript/"><span><span class="fa-solid fa-tags">&nbsp;</span>JavaScript</span></a>
+                </span><span><a href="/tags/js/"><span><span class="fa-solid fa-tags">&nbsp;</span>JS</span></a>
+                </span></div><div class="post-info-line"><div class="post-info-mod">
+                <span>Updated on 2022-10-13</span>
+            </div><div class="post-info-mod"></div>
+        </div><div class="post-info-share">
+            <span><a href="#" onclick="return false;" title="Share on Twitter" data-sharer="twitter" data-url="https://ivipin.com/how-to-use-javascript-array-push-unshift-pop-and-shift-method/" data-title="How to use JavaScript array push, unshift, pop, and shift methods" data-via="VipinMadhaan" data-hashtags="JavaScript,JS">
+            <i data-svg-src="/lib/simple-icons/icons/twitter.min.svg"></i></a><a href="#" onclick="return false;" title="Share on Facebook" data-sharer="facebook" data-url="https://ivipin.com/how-to-use-javascript-array-push-unshift-pop-and-shift-method/" data-hashtag="JavaScript">
+            <i data-svg-src="/lib/simple-icons/icons/facebook.min.svg"></i></a><a href="#" onclick="return false;" title="Share on Linkedin" data-sharer="linkedin" data-url="https://ivipin.com/how-to-use-javascript-array-push-unshift-pop-and-shift-method/">
+            <i data-svg-src="/lib/simple-icons/icons/linkedin.min.svg"></i></a><a href="#" onclick="return false;" title="Share on WhatsApp" data-sharer="whatsapp" data-url="https://ivipin.com/how-to-use-javascript-array-push-unshift-pop-and-shift-method/" data-title="How to use JavaScript array push, unshift, pop, and shift methods" data-web>
+            <i data-svg-src="/lib/simple-icons/icons/whatsapp.min.svg"></i></a><a href="#" onclick="return false;" title="Share on Reddit" data-sharer="reddit" data-url="https://ivipin.com/how-to-use-javascript-array-push-unshift-pop-and-shift-method/">
+            <i data-svg-src="/lib/simple-icons/icons/reddit.min.svg"></i></a><a href="mailto:?Body=https%3a%2f%2fivipin.com%2fhow-to-use-javascript-array-push-unshift-pop-and-shift-method%2f&amp;Subject=How%20to%20use%20JavaScript%20array%20push%2c%20unshift%2c%20pop%2c%20and%20shift%20methods" target="_blank" title="Email this" data-sharer="email" data-url="https://ivipin.com/how-to-use-javascript-array-push-unshift-pop-and-shift-method/" data-title="How to use JavaScript array push, unshift, pop, and shift methods" data-description="Guide to write JavaScript array push, unshift, pop, and shift methods">
+            <i data-svg-src="/lib/simple-icons/icons/email.min.svg"></i></a></span>
+        </div></div><div class="post-nav"><a href="/how-to-send-get-and-post-ajax-api-requests-in-vanilla-javascript/" class="prev" rel="prev" title="How to send GET and POST Ajax API requests in Vanilla JavaScript"><i class="fa-solid fa-angle-left fa-fw"></i>How to send GET and POST Ajax API requests in Vanilla JavaScript</a></div></div></div><div id="comments" class="single-card"><div id="giscus-block">
+                <div id="giscus" class="giscus"></div>
+                <noscript>Please enable JavaScript to view the comments powered by giscus.</noscript>
+            </div></div></article></div>
+            </main>
+            <footer class="footer"><div class="footer-container"><div class="subscribe-container"><div><form
+    action="https://api.follow.it/subscribe?pub=THl8mHgcavUdEveE5G_gW70DbjtVxlC9"
+    method="post"
+    target="_blank"
+    class="subscribe">
+    <h2 class="subscribe__title">Let's keep in touch</h2>
+    <p class="subscribe__copy">
+      Subscribe to keep up with fresh news and exciting updates.
+    </p>
+    <div class="form">
+      <input
+        type="email"
+        name="email"
+        required="required"
+        class="form__email"
+        placeholder="Enter your email address" />
+      <button type="submit" class="form__button">Sign up</button>
+    </div>
+  </form></div>
+</div><div class="footer-line">
+            <ul class="footer-menu"><li>
+                        <a class="footer-menu-item" href="/"> Home </a>
+                    </li><li>
+                        <a class="footer-menu-item" href="/about/"> About </a>
+                    </li><li>
+                        <a class="footer-menu-item" href="/privacy-policy/"> Privacy Policy </a>
+                    </li><li>
+                        <a class="footer-menu-item" href="/index.xml/"> Rss </a>
+                    </li><li>
+                        <a class="footer-menu-item" href="/sitemap.xml"> Sitemap </a>
+                    </li></ul>
+        </div>
+
+    <div class="footer-line" itemscope itemtype="http://schema.org/CreativeWork">
+        Copyright &copy; <span class="author" itemprop="copyrightHolder">&nbsp;Vipin Kumar Madhaan</span>. All rights reserved.
+    </div>
+</div>
+<script>
+if ('serviceWorker' in navigator) {
+    navigator.serviceWorker
+        .register('/sw.min.js?version=1.0.2', { scope: '/' })
+        .then(() => {
+            console.info('Vipin Kumar Madhaan\u00A0Service Worker Registered');
+        }, err => console.error('Vipin Kumar Madhaan\u00A0Service Worker registration failed: ', err));
+
+    navigator.serviceWorker
+        .ready
+        .then(() => {
+            console.info('Vipin Kumar Madhaan\u00A0Service Worker Ready');
+        });
+}
+</script>
+</footer>
+        </div>
+
+        <div id="fixed-buttons"><a href="#" id="back-to-top" class="fixed-button" title="Back to Top">
+                <i class="fa-solid fa-chevron-up fa-fw"></i>
+                <span class="variant-numeric">0%</span>
+            </a><a href="#" id="view-comments" class="fixed-button" title="View Comments">
+                <i class="fa-solid fa-comment fa-fw"></i>
+            </a></div>
+
+        <div class="widgets"><div class="reading-progress-bar"></div>
+        </div><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"><link rel="stylesheet" href="/lib/animate/animate.min.css"><link rel="stylesheet" href="/lib/lightgallery/lightgallery.min.css"><script src="/lib/autocomplete/autocomplete.min.js"></script><script src="/lib/lunr/lunr.min.js"></script><script src="/lib/lazysizes/lazysizes.min.js"></script><script src="/lib/lightgallery/lightgallery.min.js"></script><script src="/lib/lightgallery/lg-thumbnail.min.js"></script><script src="/lib/lightgallery/lg-zoom.min.js"></script><script src="/lib/clipboard/clipboard.min.js"></script><script src="/lib/sharer/sharer.min.js"></script><script>window.config={"code":{"copyTitle":"Copy to clipboard","maxShownLines":100},"comment":{"giscus":{"category":"Show and tell","category_id":"DIC_kwDOIJKaTc4CR2BV","mapping":"title","repo":"VipinMadhaan/iVipin","repo_id":"R_kgDOIJKaTQ"}},"lightGallery":{"actualSize":false,"exThumbImage":"data-thumbnail","hideBarsDelay":2000,"selector":".lightgallery","speed":400,"thumbContHeight":80,"thumbWidth":80,"thumbnail":true},"search":{"highlightTag":"em","lunrIndexURL":"/index.json","maxResultLength":10,"noResultsFound":"No results found","snippetLength":30,"type":"lunr"}};</script><script src="/js/theme.min.js"></script></body></html>

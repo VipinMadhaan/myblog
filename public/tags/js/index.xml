@@ -1,0 +1,15 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>JS - Tag - Vipin Kumar Madhaan</title>
+        <link>https://ivipin.com/tags/js/</link>
+        <description>JS - Tag - Vipin Kumar Madhaan</description>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>Vipin.Madhaan@gmail.com (Vipin Kumar Madhaan)</managingEditor>
+            <webMaster>Vipin.Madhaan@gmail.com (Vipin Kumar Madhaan)</webMaster><copyright>Vipin Kumar Madhaan</copyright><lastBuildDate>Thu, 13 Oct 2022 00:00:00 &#43;0530</lastBuildDate><atom:link href="https://ivipin.com/tags/js/" rel="self" type="application/rss+xml" /><item>
+    <title>How to use JavaScript array push, unshift, pop, and shift methods</title>
+    <link>https://ivipin.com/how-to-use-javascript-array-push-unshift-pop-and-shift-method/</link>
+    <pubDate>Thu, 13 Oct 2022 00:00:00 &#43;0530</pubDate><author>Vipin.Madhaan@gmail.com (Vipin Kumar Madhaan)</author><guid>https://ivipin.com/how-to-use-javascript-array-push-unshift-pop-and-shift-method/</guid>
+    <description><![CDATA[This article primarily introduces the JavaScript array Push, Unshift, Pop, and Shift methods, along with an example form for analyzing the JavaScript array Push, Unshift, Pop, and Shift methods for array addition, deletion, and other related operation skills.
+Push Method The Push method appends one or more elements to the end of the array and returns the array&rsquo;s new length. The explanation demonstrates that the push method only needs to add the elements to the end of the array in sequence, without changing the index of the original array elements.]]></description>
+</item>
+</channel>
+</rss>

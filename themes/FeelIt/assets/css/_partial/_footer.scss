@@ -1,0 +1,74 @@
+footer {
+  height: 10%;
+  width: 100%;
+  text-align: center;
+  line-height: 1.25rem;
+
+  .footer-container {
+    font-size: 0.96rem;
+    padding: 1rem 0;
+
+    .footer-line {
+      width: 100%;
+      margin: 1rem auto;
+
+      .footer-divider:not(:first-child)::before {
+        content: '|';
+        margin-left: 0.25rem;
+        margin-right: 0.25rem;
+      }
+
+      .fixit-icon {
+        top: 0.25em;
+      }
+
+      .animate-icon {
+        color: #dc143c;
+        animation: icon-animate 1.33s ease-in-out infinite;
+      }
+
+      .run-times {
+        font-variant-numeric: tabular-nums lining-nums;
+      }
+
+      .icp-br {
+        display: none;
+      }
+    }
+    .footer-menu {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: nowrap;
+      margin: auto;
+      width: fit-content;
+      padding-bottom: 1rem;
+      padding-left: 0;
+      border-bottom: 1px solid #ccc;
+      list-style-type: none;
+
+      > .footer-menu-item:hover {
+        & .sub-menu {
+          display: block;
+        }
+      }
+
+      .footer-menu-item {
+        list-style: none;
+        margin: 0 0.4rem;
+
+        &.delimiter {
+          width: 0;
+          margin: 1rem 0.5rem;
+          padding: 0;
+          border-left: 1.5px solid darken($global-font-color, 20%);
+
+          [data-theme='dark'] & {
+            border-left-color: darken($global-font-color-dark, 20%);
+          }
+        }
+      }
+    }
+  }
+
+  @include blur;
+}

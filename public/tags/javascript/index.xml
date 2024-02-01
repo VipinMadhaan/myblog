@@ -1,0 +1,23 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>JavaScript - Tag - Vipin Kumar Madhaan</title>
+        <link>https://ivipin.com/tags/javascript/</link>
+        <description>JavaScript - Tag - Vipin Kumar Madhaan</description>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>Vipin.Madhaan@gmail.com (Vipin Kumar Madhaan)</managingEditor>
+            <webMaster>Vipin.Madhaan@gmail.com (Vipin Kumar Madhaan)</webMaster><copyright>Vipin Kumar Madhaan</copyright><lastBuildDate>Thu, 13 Oct 2022 00:00:00 &#43;0530</lastBuildDate><atom:link href="https://ivipin.com/tags/javascript/" rel="self" type="application/rss+xml" /><item>
+    <title>How to use JavaScript array push, unshift, pop, and shift methods</title>
+    <link>https://ivipin.com/how-to-use-javascript-array-push-unshift-pop-and-shift-method/</link>
+    <pubDate>Thu, 13 Oct 2022 00:00:00 &#43;0530</pubDate><author>Vipin.Madhaan@gmail.com (Vipin Kumar Madhaan)</author><guid>https://ivipin.com/how-to-use-javascript-array-push-unshift-pop-and-shift-method/</guid>
+    <description><![CDATA[This article primarily introduces the JavaScript array Push, Unshift, Pop, and Shift methods, along with an example form for analyzing the JavaScript array Push, Unshift, Pop, and Shift methods for array addition, deletion, and other related operation skills.
+Push Method The Push method appends one or more elements to the end of the array and returns the array&rsquo;s new length. The explanation demonstrates that the push method only needs to add the elements to the end of the array in sequence, without changing the index of the original array elements.]]></description>
+</item>
+<item>
+    <title>How to send GET and POST Ajax API requests in Vanilla JavaScript</title>
+    <link>https://ivipin.com/how-to-send-get-and-post-ajax-api-requests-in-vanilla-javascript/</link>
+    <pubDate>Thu, 06 Oct 2022 00:00:00 &#43;0530</pubDate><author>Vipin.Madhaan@gmail.com (Vipin Kumar Madhaan)</author><guid>https://ivipin.com/how-to-send-get-and-post-ajax-api-requests-in-vanilla-javascript/</guid>
+    <description><![CDATA[Ajax is an asynchronous JavaScript and XML mechanism for updating a portion of a page. It allows you to update a portion of the page after receiving data from the server, avoiding the need to refresh the entire page.
+Furthermore, by integrating partial page refreshes in this manner, we not only provide an excellent user experience but also reduce the server burden.
+A simple Ajax request 1 2 3 var xmlhttp = new XMLHttpRequest(); xmlhttp.]]></description>
+</item>
+</channel>
+</rss>
